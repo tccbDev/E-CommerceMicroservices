@@ -1,16 +1,11 @@
-package com.mproduits.model;
+package com.example.appclient.beans;
+//
+//import javax.persistence.GeneratedValue;
+//import javax.persistence.GenerationType;
+//import javax.persistence.Id;
 
+public class ProductBean {
 
-import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-
-@Entity
-public class Product {
-
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int id;
 
     private String titre;
@@ -21,16 +16,8 @@ public class Product {
 
     private Double prix;
 
+    public ProductBean(){
 
-    public Product() {
-    }
-
-    public Product(int id, String titre, String description, String image, Double prix) {
-        this.id = id;
-        this.titre = titre;
-        this.description = description;
-        this.image = image;
-        this.prix = prix;
     }
 
     public int getId() {
@@ -75,7 +62,7 @@ public class Product {
 
     @Override
     public String toString() {
-        return "Product{" +
+        return "ProductBean{" +
                 "id=" + id +
                 ", titre='" + titre + '\'' +
                 ", description='" + description + '\'' +
@@ -83,6 +70,4 @@ public class Product {
                 ", prix=" + prix +
                 '}';
     }
-
-
 }
